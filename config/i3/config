@@ -3,13 +3,13 @@
 # exec_always --no-startup-id xrandr --output DP1-1-1 --auto --above eDP1
 
 # Run Browser for user
-exec_always --no-startup-id ~/.local/bin/shutdownBadVideos
+exec_always --no-startup-id openlp
 
 # Disable tapping on my touchpads, my laptops seem to use different ids from each other...
 # For X1 Carbon
-exec_always --no-startup-id xinput set-prop 12 334 0
+# exec_always --no-startup-id xinput set-prop 12 334 0
 # For Lenovo T430S
-exec_always --no-startup-id xinput set-prop 10 304 0
+# exec_always --no-startup-id xinput set-prop 10 304 0
 
 # exec_always --no-startup-id sleep 5;firefox-developer-edition
 # exec_always --no-startup-id ~/.local/bin/ericRunBrowser
@@ -42,7 +42,7 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec terminal
 # bindsym $mod+Return exec alacritty
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -52,7 +52,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu-frecency
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+# bindsym $mod+z exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -75,13 +75,14 @@ bindsym $mod+Ctrl+m exec alacritty start -- 'alsamixer'
 # bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F2 exec firefox-developer-edition
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F4 exec openlp
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F4 exec terminal -e ranger
+# bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+# bindsym $mod+F4 exec terminal -e ranger
 # bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+# bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+# bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
@@ -327,11 +328,8 @@ mode "resize" {
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-exec --no-startup-id nitrogen --set-scaled ~/.dotfiles/wallpaper/wallpaper.jpg;sleep 1;picom -b
+# exec --no-startup-id nitrogen --set-scaled ~/.dotfiles/wallpaper/wallpaper.jpg;sleep 1;picom -b
 
-exec --no-startup-id sleep 5;/home/{{ user.username }}/.local/bin/ericRunBrowser
-
-# exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -346,13 +344,10 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id udiskie --tray&
 
 # Change keyboard layout
-# +++ Noah +++ , I think you need this version of the command
-# exec --no-startup-id setxkbmap -model pc105 -layout us -option 'ctrl:nocaps'
-# +++ Noah +++ , I think you need this version of the command
 # exec --no-startup-id setxkbmap -model thinkpad -layout us -variant dvorak -option 'ctrl:nocaps'
-exec --no-startup-id setxkbmap -model thinkpad -layout us -option 'ctrl:nocaps'
+# exec --no-startup-id setxkbmap -model thinkpad -layout us -option 'ctrl:nocaps'
 # exec --no-startup-id setxkbmap -option 'ctrl:nocaps'
-exec --no-startup-id xcape -e 'Control_L=Escape'
+# exec --no-startup-id xcape -e 'Control_L=Escape'
 
 
 # Color palette used for the terminal ( ~/.Xresources file )
