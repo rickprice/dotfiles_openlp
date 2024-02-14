@@ -231,6 +231,7 @@ bindsym $mod+Shift+F12 move container to workspace $ws10; workspace $ws10
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [class="openlp"] $ws1
 
 assign [class="zoom"] $ws10
 # for_window [class="zoom"] move container to workspace $ws10
