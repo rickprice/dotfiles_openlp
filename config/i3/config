@@ -1,9 +1,11 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+exec_always xrandr --output eDP1 --primary
 # exec_always --no-startup-id xrandr --output DP1-1-1 --auto --above eDP1
 
 # Run Browser for user
-exec_always --no-startup-id sh -c 'sleep 0.2; i3-msg workspace 1; openlp'
+# exec_always --no-startup-id sh -c 'sleep 0.2; i3-msg workspace 1; openlp'
+exec_always --no-startup-id openlp'
 
 # Disable tapping on my touchpads, my laptops seem to use different ids from each other...
 # For X1 Carbon
@@ -49,7 +51,7 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 # bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec --no-startup-id dmenu-frecency
+bindsym $mod+d exec --no-startup-id dmenu
 
 # launch categorized menu
 # bindsym $mod+z exec --no-startup-id morc_menu
@@ -75,7 +77,8 @@ bindsym $mod+Ctrl+m exec alacritty start -- 'alsamixer'
 # bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F2 exec firefox-developer-edition
 bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F4 exec sh -c 'sleep 0.2; i3-msg workspace 1; openlp'
+# bindsym $mod+F4 exec sh -c 'sleep 0.2; i3-msg workspace 1; openlp'
+bindsym $mod+F4 exec openlp'
 # bindsym $mod+F3 exec ranger
 # bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 # bindsym $mod+F4 exec terminal -e ranger
@@ -185,7 +188,7 @@ workspace 6 output primary
 workspace 7 output primary
 workspace 8 output primary
 workspace 9 output primary
-workspace "10:ext" output "DP-1-1" primary
+workspace "10:ext" output "HDMI-1"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
