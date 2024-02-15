@@ -71,9 +71,9 @@ bindsym $mod+Ctrl+m exec alacritty start -- 'alsamixer'
 # Start Applications
 # bindsym $mod+Ctrl+b exec alacritty start -- 'bmenu'
 # bindsym $mod+F2 exec google-chrome-stable
-bindsym $mod+F2 exec i3-msg "workspace 1; exec firefox"
-bindsym $mod+F3 exec i3-msg "workspace 1; exec pcmanfm"
-bindsym $mod+F4 exec i3-msg "workspace 1; exec openlp"
+bindsym $mod+F2 workspace 1; exec firefox
+bindsym $mod+F3 workspace 1; exec pcmanfm
+bindsym $mod+F4 workspace 1; exec openlp
 # bindsym $mod+F3 exec ranger
 # bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 # bindsym $mod+F4 exec terminal -e ranger
