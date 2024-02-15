@@ -89,6 +89,10 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # focus_follows_mouse no
 focus_follows_mouse yes
 
+# This needs to be disabled, because OpenLP opens a new window on the projector desktop for 
+# presentations, and the mouse jumps to the projector screen
+mouse_warping none
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
