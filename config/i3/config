@@ -342,7 +342,7 @@ exec --no-startup-id pamac-tray
 # exec_always --no-startup-id fix_xcursor
 exec --no-startup-id udiskie --tray&
 # Switch to workspace 1
-exec_always --no-startup-id i3-msg "workspace 1; exec sleep 0.3; exec openlp"
+exec_always --no-startup-id i3-msg "workspace 1; exec sleep 1; exec openlp"
 # exec_always --no-startup-id openlp
 
 # Change keyboard layout
