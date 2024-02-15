@@ -344,8 +344,8 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id udiskie --tray&
 # exec_always --no-startup-id sh -c 'sleep 0.2; i3-msg workspace 1; openlp'
 # Switch to workspace 1
-exec_always --no-startup-id sh -c 'sleep 0.2; i3-msg workspace 1'
-exec_always --no-startup-id openlp
+exec_always --no-startup-id sh -c 'sleep 0.3; i3-msg workspace 1; openlp'
+# exec_always --no-startup-id openlp
 
 # Change keyboard layout
 # exec --no-startup-id setxkbmap -model thinkpad -layout us -variant dvorak -option 'ctrl:nocaps'
