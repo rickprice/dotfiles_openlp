@@ -32,5 +32,5 @@
 "config/bashrc" = "~/.bashrc"
 
 [X11.files]
+"etc/X11/xorg.conf.d/00-keyboard.conf" = { target = "/etc/X11/xorg.conf.d/00-keyboard.conf", type = "symbolic", owner = "root" }
 "etc/X11/xorg.conf.d/30-touchpad.conf" = { target = "/etc/X11/xorg.conf.d/30-touchpad.conf", type = "symbolic", owner = "root" }
-

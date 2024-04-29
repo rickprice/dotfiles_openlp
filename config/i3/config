@@ -351,7 +351,7 @@ exec --no-startup-id udiskie --tray&
 
 # Change keyboard layout
 # exec --no-startup-id setxkbmap -model thinkpad -layout us -variant dvorak -option 'ctrl:nocaps'
-exec --no-startup-id /usr/bin/setxkbmap -model latitude -layout us -option ''
+# exec --no-startup-id /usr/bin/setxkbmap -model latitude -layout us -option ''
 # exec --no-startup-id setxkbmap -option 'ctrl:nocaps'
 # exec --no-startup-id xcape -e 'Control_L=Escape'
 
