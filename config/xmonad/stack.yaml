@@ -17,9 +17,9 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver:
+resolver: ghc-9.0.2
   # url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/22/7.yaml
-  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/22/12.yaml
+  # url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/22/12.yaml
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
