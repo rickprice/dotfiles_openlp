@@ -78,10 +78,12 @@ myRDPClient = "remmina"
 myRunBackgrounds = "feh --no-fehbg --bg-max --random " ++ myBackgrounds
 myFixScreens = "autorandr --change"
 myArdour = "ardour8"
+myOBS = "obs"
+myOpenLP = "openlp"
 
 -- Define extra workspaces that I use all the time, by hostname
 myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
-myExtraWorkspaces _ = ["SCRATCH", "DOC", "NSP"]
+myExtraWorkspaces _ = ["SERVICE","FILES", "SCRATCH", "NSP"]
 
 spawnKey key program = (appRunKey ++ key, spawn program)
 
@@ -194,23 +196,31 @@ myStartupHook  hostname= do
     spawnOnce "killall udiskie; udiskie --tray"
     -- spawnOnce "qmidinet -n 6"
     spawn myFixScreens
-    if hostname == hostnameWork
-        then
-            do
-                spawnOnce "meteo-qt"
-                -- Setup initial work window
-                spawnOn "MAIL" myEmailer
-                -- liftIO (threadDelay 7000000)
-                -- Setup IM programs
-                spawnOn "IM" "slack"
-                -- liftIO (threadDelay 7000000)
-                spawnOn "IM" "discord"
-                -- Browser
-                -- liftIO (threadDelay 7000000)
-                spawnOn "ADM" myBrowser
-        else
-            do
-                spawnOn "FP12" myArdour
+
+    -- Setup Service
+    spawnOn "SERVICE" myOBS
+    spawnOn "SERVICE" myOpenLP
+
+    -- Setup files
+    spawnOn "FILES" myFileManager
+
+--    if hostname == hostnameWork
+--        then
+--            do
+--                spawnOnce "meteo-qt"
+--                -- Setup initial work window
+--                spawnOn "MAIL" myEmailer
+--                -- liftIO (threadDelay 7000000)
+--                -- Setup IM programs
+--                spawnOn "IM" "slack"
+--                -- liftIO (threadDelay 7000000)
+--                spawnOn "IM" "discord"
+--                -- Browser
+--                -- liftIO (threadDelay 7000000)
+--                spawnOn "ADM" myBrowser
+--        else
+--            do
+--                spawnOn "FP12" myArdour
 
 
 main :: IO ()
@@ -275,7 +285,7 @@ myLayouts = toggleLayouts (noBorders Full) (smartBorders (tall ||| multiColumn |
     -- mirrorTall = Mirror (Tall 1 (3 / 100) (3 / 5))
     multiColumn = multiCol [1] 1 0.01 (-0.5)
 
-    tall = (Tall 1 (10/100) (60/100))
+    tall = (Tall 1 (10/100) (70/100))
 
 myXmobarPP :: PP
 myXmobarPP =
