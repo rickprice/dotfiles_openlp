@@ -260,7 +260,7 @@ myManageHook =
         , isDialog --> doFloat
         ]
 
-myLayouts = toggleLayouts (noBorders Full) (smartBorders (multiColumn ||| mainGrid ||| magnifier mainGrid ))
+myLayouts = toggleLayouts (noBorders Full) (smartBorders (tall ||| multiColumn ||| mainGrid ||| magnifier mainGrid ))
   where
     magnifier = magnifiercz 1.4
 
@@ -274,6 +274,8 @@ myLayouts = toggleLayouts (noBorders Full) (smartBorders (multiColumn ||| mainGr
     mainGrid = SplitGrid orientation masterRows masterColumns masterPortion slaveAspectRatio resizeIncrement
     -- mirrorTall = Mirror (Tall 1 (3 / 100) (3 / 5))
     multiColumn = multiCol [1] 1 0.01 (-0.5)
+
+    tall = Tall 1 10/100 60/100
 
 myXmobarPP :: PP
 myXmobarPP =
