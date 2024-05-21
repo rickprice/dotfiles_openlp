@@ -260,13 +260,13 @@ myManageHook =
         -- , ewmhDesktopsManageHook
         -- , manageZoomHook
         -- , className =? "zoom" --> doSink
-        , className =? "simple-scan" --> doSink
-        , className =? "zoom" --> doShift "ZM"
-        , className =? "Gimp" --> doFloat
-        , className =? "meteo-qt" --> doFloat
-        , className =? "discord" --> doShift "IM"
-        , className =? "Slack" --> doShift "IM"
-        , className =? "thunderbird" --> doShift "MAIL"
+--        , className =? "simple-scan" --> doSink
+        , className =? "soffice" --> doShift "PROJECTION"
+--        , className =? "Gimp" --> doFloat
+--        , className =? "meteo-qt" --> doFloat
+--        , className =? "discord" --> doShift "IM"
+--        , className =? "Slack" --> doShift "IM"
+--        , className =? "thunderbird" --> doShift "MAIL"
         , isDialog --> doFloat
         ]
 
