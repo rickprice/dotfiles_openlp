@@ -54,8 +54,8 @@ import qualified XMonad.Layout.IndependentScreens as LIS
 myModMask = mod4Mask
 
 -- Hostnames
-hostnameWork = "fwork"
-hostnameDAW = "daw"
+hostnameChurch = "church"
+hostnameChurchMobile = "church"
 
 -- Programs we run frequently
 myBrowser = "firefox-developer-edition"
@@ -82,8 +82,8 @@ myOBS = "obs"
 myOpenLP = "openlp"
 
 -- Define extra workspaces that I use all the time, by hostname
-myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
-myExtraWorkspaces _ = ["SERVICE","PROJECTION", "FILES", "SCRATCH", "NSP"]
+-- myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
+myExtraWorkspaces _ = ["SERVICE","PROJECTION","BROWSER", "FILES", "SCRATCH", "NSP"]
 
 spawnKey key program = (appRunKey ++ key, spawn program)
 
@@ -248,7 +248,7 @@ createMyConfig hostname =
                 }
                 `additionalKeysP` myNewStyleKeys hostname
 
-myWorkspaces hostname | hostname == hostnameWork = asWorkspaces ++ myExtraWorkspaces hostname ++ tWorkspaces ++ fWorkspaces
+-- myWorkspaces hostname | hostname == hostnameWork = asWorkspaces ++ myExtraWorkspaces hostname ++ tWorkspaces ++ fWorkspaces
 myWorkspaces hostname = myExtraWorkspaces hostname
 
 
@@ -262,6 +262,7 @@ myManageHook =
         -- , className =? "zoom" --> doSink
 --        , className =? "simple-scan" --> doSink
         , className =? "Soffice" --> doShift "PROJECTION"
+        , className =? "Soffice" --> doSink
 --        , className =? "Gimp" --> doFloat
 --        , className =? "meteo-qt" --> doFloat
 --        , className =? "discord" --> doShift "IM"
@@ -437,27 +438,24 @@ powerkeys key hostname = do
     screenCount <- LIS.countScreens
     case (screenCount, key, hostname) of
         -- 3 Screen Setup
-        (3,1, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "StandardWork"
-        (3,2, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Messaging"
-        (3,3, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Frederick1"
-        (3,4, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Tamara1"
-        (3,6, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Zoom"
-        (3,7, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Zoom2"
+--        (3,1, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "StandardWork"
+--        (3,2, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Messaging"
+--        (3,3, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Frederick1"
+--        (3,4, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Tamara1"
+--        (3,6, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Zoom"
+--        (3,7, hostname) | hostname == hostnameWork -> ADWG.viewWSGroup "Zoom2"
 
 
         -- 2 Screen Setup
-        (2,1, hostname) | hostname == hostnameDAW -> ADWG.viewWSGroup "Frederick1"
-        (2,2, hostname) | hostname == hostnameDAW -> ADWG.viewWSGroup "Frederick2"
-        (2,3, hostname) | hostname == hostnameDAW -> ADWG.viewWSGroup "Frederick3"
+--        (2,1, hostname) | hostname == hostnameDAW -> ADWG.viewWSGroup "Frederick1"
+--        (2,2, hostname) | hostname == hostnameDAW -> ADWG.viewWSGroup "Frederick2"
+--        (2,3, hostname) | hostname == hostnameDAW -> ADWG.viewWSGroup "Frederick3"
 
         -- Default Screen Setup
-        (_,1, hostname) | hostname == hostnameWork -> showDesktop "W11"
-        (_,1,_) -> showDesktop "F11"
-
-        (_,2, _) -> showDesktop "IM"
-        (_,3, _) -> showDesktop "MAIL"
-        (_,4, _) -> showDesktop "ADM"
-        (_,6, _) -> showDesktop "ZM"
-
+--        (_,1, hostname) | hostname == hostnameWork -> showDesktop "W11"
+        (_,1,_) -> showDesktop "SERVICE"
+        (_,2, _) -> showDesktop "PROJECTION"
+        (_,3, _) -> showDesktop "BROWSER"
+        (_,4, _) -> showDesktop "FILES"
         (_,5, _) -> showDesktop "SCRATCH"
         (_,8, _) -> showDesktop "NSP"
