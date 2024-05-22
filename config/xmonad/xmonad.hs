@@ -83,7 +83,7 @@ myOpenLP = "openlp"
 
 -- Define extra workspaces that I use all the time, by hostname
 -- myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
-myExtraWorkspaces _ = ["SERVICE","PROJECTION","BROWSER", "FILES", "SCRATCH", "NSP"]
+myExtraWorkspaces _ = ["SERVICE","BROWSER", "FILES", "SCRATCH", "NSP","PROJECTION"]
 
 spawnKey key program = (appRunKey ++ key, spawn program)
 
@@ -454,8 +454,7 @@ powerkeys key hostname = do
         -- Default Screen Setup
 --        (_,1, hostname) | hostname == hostnameWork -> showDesktop "W11"
         (_,1,_) -> showDesktop "SERVICE"
-        (_,2, _) -> showDesktop "PROJECTION"
+        (_,2, _) -> showDesktop "FILES"
         (_,3, _) -> showDesktop "BROWSER"
-        (_,4, _) -> showDesktop "FILES"
         (_,5, _) -> showDesktop "SCRATCH"
         (_,8, _) -> showDesktop "NSP"
