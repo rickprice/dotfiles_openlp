@@ -262,8 +262,9 @@ myManageHook =
         -- , manageZoomHook
         -- , className =? "zoom" --> doSink
 --        , className =? "simple-scan" --> doSink
-        , className =? "Soffice" --> doShift "PROJECTION"
-        , className =? "Soffice" --> doSink
+        , className =? "Soffice" --> do 
+                                        doShift "PROJECTION"
+                                        doSink
 --        , className =? "Gimp" --> doFloat
 --        , className =? "meteo-qt" --> doFloat
 --        , className =? "discord" --> doShift "IM"
