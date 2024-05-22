@@ -120,6 +120,7 @@ myCustomKeys hostname =
     , ("M-6", powerkeys 6 hostname)
     , ("M-7", powerkeys 7 hostname)
     , ("M-8", powerkeys 8 hostname)
+    , ("M-9", powerkeys 9 hostname)
 
     , ("M-S-1", moveFocusedWindowToDesktop "W11")
     , ("M-S-2", moveFocusedWindowToDesktop "IM")
@@ -454,8 +455,8 @@ powerkeys key hostname = do
         -- Default Screen Setup
 --        (_,1, hostname) | hostname == hostnameWork -> showDesktop "W11"
         (_,1,_) -> showDesktop "SERVICE"
-        (_,2, _) -> showDesktop "FILES"
-        (_,3, _) -> showDesktop "BROWSER"
+        (_,2, _) -> showDesktop "BROWSER"
+        (_,3, _) -> showDesktop "FILES"
         (_,5, _) -> showDesktop "SCRATCH"
         (_,8, _) -> showDesktop "NSP"
         (_,9, _) -> showDesktop "PROJECTION"
