@@ -58,7 +58,7 @@ hostnameChurch = "church"
 hostnameChurchMobile = "church"
 
 -- Programs we run frequently
-myBrowser = "firefox-developer-edition"
+myBrowser = "firefox"
 myEmailer = "thunderbird"
 myBrowserNyxt = "nyxt --no-socket"
 myAudioManager = "pavucontrol"
@@ -204,6 +204,9 @@ myStartupHook  hostname= do
 
     -- Setup files
     spawnOn "FILES" myFileManager
+
+    -- Setup Browser
+    spawnOn "BROWSER" myBrowser
 
 --    if hostname == hostnameWork
 --        then
