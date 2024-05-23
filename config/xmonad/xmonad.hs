@@ -289,7 +289,7 @@ myLayouts = toggleLayouts (noBorders Full) (smartBorders (tall ||| multiColumn |
     -- mirrorTall = Mirror (Tall 1 (3 / 100) (3 / 5))
     multiColumn = multiCol [1] 1 0.01 (-0.5)
 
-    tall = (Tall 1 (10/100) (70/100))
+    tall = (Tall 1 (10/100) (80/100))
 
 myXmobarPP :: PP
 myXmobarPP =
