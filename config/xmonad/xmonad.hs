@@ -198,16 +198,6 @@ myStartupHook  hostname= do
     -- spawnOnce "qmidinet -n 6"
     spawn myFixScreens
 
-    -- Setup Service
-    spawnOn "SERVICE" myOBS
-    spawnOn "SERVICE" myOpenLP
-
-    -- Setup files
-    spawnOn "FILES" myFileManager
-
-    -- Setup Browser
-    spawnOn "BROWSER" myBrowser
-
     if hostname == hostnameChurch
         then
             do
