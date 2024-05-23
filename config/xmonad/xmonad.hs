@@ -55,7 +55,7 @@ myModMask = mod4Mask
 
 -- Hostnames
 hostnameChurch = "church"
-hostnameChurchMobile = "church"
+hostnameChurchMobile = "churchmobile"
 
 -- Programs we run frequently
 myBrowser = "firefox"
@@ -208,23 +208,28 @@ myStartupHook  hostname= do
     -- Setup Browser
     spawnOn "BROWSER" myBrowser
 
---    if hostname == hostnameWork
---        then
---            do
---                spawnOnce "meteo-qt"
---                -- Setup initial work window
---                spawnOn "MAIL" myEmailer
---                -- liftIO (threadDelay 7000000)
---                -- Setup IM programs
---                spawnOn "IM" "slack"
---                -- liftIO (threadDelay 7000000)
---                spawnOn "IM" "discord"
---                -- Browser
---                -- liftIO (threadDelay 7000000)
---                spawnOn "ADM" myBrowser
---        else
---            do
---                spawnOn "FP12" myArdour
+   if hostname == hostnameChurch
+       then
+           do
+                -- Setup Service
+                spawnOn "SERVICE" myOBS
+                spawnOn "SERVICE" myOpenLP
+
+                -- Setup files
+                spawnOn "FILES" myFileManager
+
+                -- Setup Browser
+                spawnOn "BROWSER" myBrowser
+       else
+           do
+                -- Setup Service
+                spawnOn "SERVICE" myOpenLP
+
+                -- Setup files
+                spawnOn "FILES" myFileManager
+
+                -- Setup Browser
+                spawnOn "BROWSER" myBrowser
 
 
 main :: IO ()
