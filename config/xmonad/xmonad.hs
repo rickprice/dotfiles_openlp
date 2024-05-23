@@ -208,9 +208,9 @@ myStartupHook  hostname= do
     -- Setup Browser
     spawnOn "BROWSER" myBrowser
 
-   if hostname == hostnameChurch
-       then
-           do
+    if hostname == hostnameChurch
+        then
+            do
                 -- Setup Service
                 spawnOn "SERVICE" myOBS
                 spawnOn "SERVICE" myOpenLP
@@ -220,8 +220,8 @@ myStartupHook  hostname= do
 
                 -- Setup Browser
                 spawnOn "BROWSER" myBrowser
-       else
-           do
+        else
+            do
                 -- Setup Service
                 spawnOn "SERVICE" myOpenLP
 
