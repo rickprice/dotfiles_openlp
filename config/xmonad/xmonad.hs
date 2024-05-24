@@ -237,7 +237,7 @@ createMyConfig hostname =
             def
                 { terminal = myTerminal
                 , modMask = myModMask
-                , layoutHook = smartBorders $ desktopLayoutModifiers myLayouts
+                , layoutHook = noBorders $ desktopLayoutModifiers myLayouts
                 , manageHook = myManageHook
                 , startupHook = myStartupHook hostname
                 , normalBorderColor = myNormalBorderColor
