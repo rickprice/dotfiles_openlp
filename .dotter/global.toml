@@ -39,3 +39,6 @@
 "config/xmonad" = { target = "~/.config/xmonad", type = "symbolic" }
 "home/xmobarrc" = "~/.xmobarrc"
 "home/stalonetrayrc" = "~/.stalonetrayrc"
+
+[TouchOSC.files]
+"config/TouchOSC/ChurchService.tosc" = "~/.config/TouchOSC/ChurchService.tosc"

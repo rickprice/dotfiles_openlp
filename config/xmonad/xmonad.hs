@@ -80,7 +80,7 @@ myFixScreens = "autorandr --change"
 myArdour = "ardour8"
 myOBS = "obs"
 myOpenLP = "openlp"
-myTouchOSC = "/opt/touchosc/TouchOSC --general.ui.editor false ~/TestChurch.tosc"
+myTouchOSC = "/opt/touchosc/TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc"
 
 -- Define extra workspaces that I use all the time, by hostname
 -- myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
