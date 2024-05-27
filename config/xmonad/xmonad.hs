@@ -80,6 +80,7 @@ myFixScreens = "autorandr --change"
 myArdour = "ardour8"
 myOBS = "obs"
 myOpenLP = "openlp"
+myTouchOSC = "/opt/touchosc/TouchOSC --general.ui.editor false ~/TestChurch.tosc"
 
 -- Define extra workspaces that I use all the time, by hostname
 -- myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
@@ -204,6 +205,7 @@ myStartupHook  hostname= do
                 -- Setup Service
                 spawnOn "SERVICE" myOBS
                 spawnOn "SERVICE" myOpenLP
+                spawnOn "SERVICE" myTouchOSC
 
                 -- Setup files
                 spawnOn "FILES" myFileManager
@@ -283,7 +285,7 @@ myLayouts = toggleLayouts (noBorders Full) (smartBorders (threeColumn ||| tall |
     mainGrid = SplitGrid orientation masterRows masterColumns masterPortion slaveAspectRatio resizeIncrement
     -- mirrorTall = Mirror (Tall 1 (3 / 100) (3 / 5))
     multiColumn = multiCol [1] 1 0.01 (-0.5)
-    threeColumn = ThreeColMid 1 (3/100) (80/100)
+    threeColumn = ThreeColMid 1 (3/100) (70/100)
 
     tall = (Tall 1 (10/100) (80/100))
 
