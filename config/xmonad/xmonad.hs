@@ -204,6 +204,7 @@ myStartupHook  hostname= do
             do
                 -- Setup Service
                 spawnOn "SERVICE" myOBS
+                liftIO (threadDelay 5000000)
                 spawnOn "SERVICE" myTouchOSC
                 spawnOn "SERVICE" myOpenLP
 
