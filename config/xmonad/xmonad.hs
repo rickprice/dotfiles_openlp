@@ -203,8 +203,8 @@ myStartupHook  hostname= do
         then
             do
                 -- Setup Service
-                spawnOn "SERVICE" myOBS
                 spawnOn "SERVICE" myTouchOSC
+                spawnOn "SERVICE" myOBS
                 spawnOn "SERVICE" myOpenLP
 
                 -- Setup files
