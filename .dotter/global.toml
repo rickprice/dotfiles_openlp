@@ -42,3 +42,6 @@
 
 [TouchOSC.files]
 "config/TouchOSC/ChurchService.tosc" = "~/.config/TouchOSC/ChurchService.tosc"
+
+[openLPOSCControl.files]
+"home/openlp-OSC-control" = "~/OpenLPOSCControl"
