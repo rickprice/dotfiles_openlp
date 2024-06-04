@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 flit = "*"
 build = "*"
-openlposccontrol = {file = "dist/openlposccontrol-0.1.dev23+ga9bff21-py3-none-any.whl"}
+openlposccontrol = "*"
 
 [dev-packages]
 

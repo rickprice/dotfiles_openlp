@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9cecba7c083e42062cf9a1a994984cae7e61be877937f82a4cddf533c91575b7"
+            "sha256": "bea901a71cae983c451498b58abb0064629f0be60389a261a11901ceadeb2dad"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -163,10 +163,13 @@
             "version": "==3.7"
         },
         "openlposccontrol": {
-            "file": "dist/openlposccontrol-0.1.dev23+ga9bff21-py3-none-any.whl",
             "hashes": [
-                "sha256:ffe7a2972b95e96f1c830b07a1a5879009497c31bde781e29943b97e86f590ae"
-            ]
+                "sha256:844a7bc481c64627548aa1de456a5e0c6c83c8fc25074fa21c8785975d39e95b",
+                "sha256:9aa2562f14e0e7171268b89740de7700726de1a3051b5378e57e75b16d3f9733"
+            ],
+            "index": "pypi",
+            "markers": "python_version ~= '3.8'",
+            "version": "==0.1.1"
         },
         "packaging": {
             "hashes": [
