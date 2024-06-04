@@ -164,12 +164,12 @@
         },
         "openlposccontrol": {
             "hashes": [
-                "sha256:844a7bc481c64627548aa1de456a5e0c6c83c8fc25074fa21c8785975d39e95b",
-                "sha256:9aa2562f14e0e7171268b89740de7700726de1a3051b5378e57e75b16d3f9733"
+                "sha256:0b480ef4949ac3c342f0152fdf5d39ee494e8c72ab742611679968609ce657c7",
+                "sha256:4f45c682e4c53fe5e9e17340670b5589f763a0242b9ceec415c530e7df0478bd"
             ],
             "index": "pypi",
             "markers": "python_version ~= '3.8'",
-            "version": "==0.1.1"
+            "version": "==0.1.2"
         },
         "packaging": {
             "hashes": [

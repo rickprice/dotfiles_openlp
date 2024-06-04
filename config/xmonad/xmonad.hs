@@ -208,7 +208,6 @@ myStartupHook  hostname= do
                 liftIO (threadDelay 5000000)
                 spawnOn "SERVICE" myTouchOSC
                 spawnOn "SERVICE" myOpenLP
-                liftIO (threadDelay 5000000)
                 spawn myOpenLPOSCControl
 
                 -- Setup files
