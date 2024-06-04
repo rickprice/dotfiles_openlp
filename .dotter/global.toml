@@ -44,4 +44,5 @@
 "config/TouchOSC/ChurchService.tosc" = { target = "~/.config/TouchOSC/ChurchService.tosc", type = "symbolic"}
 
 [openLPOSCControl.files]
-"home/openlp-OSC-control" = "~/OpenLPOSCControl"
+"home/openlp-OSC-control/Pipfile" = { target = "~/OpenLPOSCControl/Pipfile", type = "template"}
+"home/openlp-OSC-control/Pipfile.lock" = { target = "~/OpenLPOSCControl/Pipfile.lock", type = "template"}
