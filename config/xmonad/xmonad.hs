@@ -81,6 +81,7 @@ myArdour = "ardour8"
 myOBS = "obs"
 myOpenLP = "openlp"
 myTouchOSC = "/opt/touchosc/TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc"
+myOpenLPOSCControl = "PIPENV_PIPFILE=/home/church/OpenLPOSCControl/Pipfile pipenv run openLPOSCControl"
 
 -- Define extra workspaces that I use all the time, by hostname
 -- myExtraWorkspaces hostname | hostname == hostnameWork = ["IM", "MAIL", "ADM", "SCRATCH", "ZM", "DOC", "NSP"]
@@ -207,6 +208,8 @@ myStartupHook  hostname= do
                 liftIO (threadDelay 5000000)
                 spawnOn "SERVICE" myTouchOSC
                 spawnOn "SERVICE" myOpenLP
+                liftIO (threadDelay 5000000)
+                spawn myOpenLPOSCControl
 
                 -- Setup files
                 spawnOn "FILES" myFileManager
