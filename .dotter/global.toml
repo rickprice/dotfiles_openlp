@@ -41,7 +41,7 @@
 "home/stalonetrayrc" = "~/.stalonetrayrc"
 
 [TouchOSC.files]
-"config/TouchOSC/ChurchService.tosc" = "~/.config/TouchOSC/ChurchService.tosc"
+"config/TouchOSC/ChurchService.tosc" = { target = "~/.config/TouchOSC/ChurchService.tosc", type = "symbolic"}
 
 [openLPOSCControl.files]
 "home/openlp-OSC-control" = "~/OpenLPOSCControl"
