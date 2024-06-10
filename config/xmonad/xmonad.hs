@@ -436,6 +436,8 @@ setupWorkspaceGroups _ = do
     let projectionScreen = 2
 
     ADWG.addRawWSGroup "Projection" [(displayScreen, "SERVICE"),(projectionScreen, "PROJECTION")]
+    ADWG.addRawWSGroup "Browser" [(displayScreen, "BROWSER"),(projectionScreen, "PROJECTION")]
+    ADWG.addRawWSGroup "Files" [(displayScreen, "FILES"),(projectionScreen, "PROJECTION")]
 
 powerkeys key hostname = do
     -- case (screenCount, key) of
@@ -457,9 +459,9 @@ powerkeys key hostname = do
 
         -- Default Screen Setup
 --        (_,1, hostname) | hostname == hostnameWork -> showDesktop "W11"
-        (_,1,_) -> showDesktop "SERVICE"
-        (_,2, _) -> showDesktop "BROWSER"
-        (_,3, _) -> showDesktop "FILES"
+        (_,1,_) -> ADWG.viewWSGroup "Projection"
+        (_,2,_) -> ADWG.viewWSGroup "Browser"
+        (_,3,_) -> ADWG.viewWSGroup "Files"
         (_,5, _) -> showDesktop "SCRATCH"
         (_,8, _) -> showDesktop "NSP"
         (_,9, _) -> showDesktop "PROJECTION"
