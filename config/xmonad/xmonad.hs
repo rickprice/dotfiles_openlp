@@ -101,15 +101,15 @@ myCustomKeys hostname =
     [ ("M-f", sendMessage ToggleLayout)
     , ("M-S-<Enter>", spawn myTerminal)
     , spawnKey "b" myBrowser
-    , spawnKey "d" (myDarkTable ++ " --library " ++ myDarkTablePersonalLibrary)
-    , spawnKey "S-d" (myDarkTable ++ " --library " ++ myDarkTableCommercialLibrary)
-    , spawnKey "i" myInkScape
-    , spawnKey "e" myEbookViewer
+    -- , spawnKey "d" (myDarkTable ++ " --library " ++ myDarkTablePersonalLibrary)
+    -- , spawnKey "S-d" (myDarkTable ++ " --library " ++ myDarkTableCommercialLibrary)
+    -- , spawnKey "i" myInkScape
+    -- , spawnKey "e" myEbookViewer
     , spawnKey "f" myFileManager
     , spawnKey "m" mySystemMonitor -- performance monitor
-    , spawnKey "s" myScanner
+    -- , spawnKey "s" myScanner
     , spawnKey "c" myCalculator
-    , spawnKey "r" myRDPClient
+    -- , spawnKey "r" myRDPClient
     , spawnKey "a" myArdour
     , spawnKey "z" myFixScreens
 
@@ -124,20 +124,21 @@ myCustomKeys hostname =
     , ("M-8", powerkeys 8 hostname)
     , ("M-9", powerkeys 9 hostname)
 
-    , ("M-S-1", moveFocusedWindowToDesktop "W11")
-    , ("M-S-2", moveFocusedWindowToDesktop "IM")
-    , ("M-S-3", moveFocusedWindowToDesktop "MAIL")
-    , ("M-S-4", moveFocusedWindowToDesktop "ADM")
+    , ("M-S-1", moveFocusedWindowToDesktop "SERVICE")
+    , ("M-S-2", moveFocusedWindowToDesktop "BROWSER")
+    , ("M-S-3", moveFocusedWindowToDesktop "FILES")
+    -- , ("M-S-4", moveFocusedWindowToDesktop "ADM")
     , ("M-S-5", moveFocusedWindowToDesktop "SCRATCH")
-    , ("M-S-6", moveFocusedWindowToDesktop "ZM")
-    , ("M-S-7", moveFocusedWindowToDesktop "NSP")
+    -- , ("M-S-6", moveFocusedWindowToDesktop "ZM")
+    , ("M-S-8", moveFocusedWindowToDesktop "NSP")
+    , ("M-S-9", moveFocusedWindowToDesktop "PROJECTION")
     ]
 
-    ++ workspaceKeys "i" "IM"
-    ++ workspaceKeys "m" "MAIL"
-    ++ workspaceKeys "d" "DOC"
+    -- ++ workspaceKeys "i" "IM"
+    -- ++ workspaceKeys "m" "MAIL"
+    -- ++ workspaceKeys "d" "DOC"
     ++ workspaceKeys "s" "SCRATCH"
-    ++ workspaceKeys "z" "ZM"
+    -- ++ workspaceKeys "z" "ZM"
     ++ workspaceKeys "n" "NSP"
 
     -- Dynamic ScratchPads
@@ -146,19 +147,19 @@ myCustomKeys hostname =
 
     ++ dynamicWorkspaceGroupKeys "/" "modslash"
 
-    ++ viewGroupKeys "w 1" "Work1"
-    ++ viewGroupKeys "w 2" "Work2"
-    ++ viewGroupKeys "w 3" "Work3"
-
-    ++ viewGroupKeys "f 1" "Frederick1"
-    ++ viewGroupKeys "f 2" "Frederick2"
-    ++ viewGroupKeys "f 3" "Frederick3"
-
-    ++ viewGroupKeys "t 1" "Tamara1"
-    ++ viewGroupKeys "t 2" "Tamara2"
-
-    ++ viewGroupKeys "z 1" "Zoom"
-    ++ viewGroupKeys "z 2" "Zoom2"
+    -- ++ viewGroupKeys "w 1" "Work1"
+    -- ++ viewGroupKeys "w 2" "Work2"
+    -- ++ viewGroupKeys "w 3" "Work3"
+    --
+    -- ++ viewGroupKeys "f 1" "Frederick1"
+    -- ++ viewGroupKeys "f 2" "Frederick2"
+    -- ++ viewGroupKeys "f 3" "Frederick3"
+    --
+    -- ++ viewGroupKeys "t 1" "Tamara1"
+    -- ++ viewGroupKeys "t 2" "Tamara2"
+    --
+    -- ++ viewGroupKeys "z 1" "Zoom"
+    -- ++ viewGroupKeys "z 2" "Zoom2"
 
     -- ++ [
     -- Dynamic Workspace Groups
@@ -205,7 +206,7 @@ myStartupHook  hostname= do
             do
                 -- Setup Service
                 spawnOn "SERVICE" myOBS
-                liftIO (threadDelay 5000000)
+                liftIO (threadDelay 6000000)
                 spawnOn "SERVICE" myTouchOSC
                 spawnOn "SERVICE" myOpenLP
                 spawn myOpenLPOSCControl
