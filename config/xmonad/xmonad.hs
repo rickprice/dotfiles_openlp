@@ -432,8 +432,8 @@ myNewStyleKeys hostname =
 
 setupWorkspaceGroups _ = do
     screenCount <- LIS.countScreens
-    let displayScreen = 1
-    let projectionScreen = 2
+    let displayScreen = 0
+    let projectionScreen = 1
 
     ADWG.addRawWSGroup "Projection" [(displayScreen, "SERVICE"),(projectionScreen, "PROJECTION")]
     ADWG.addRawWSGroup "Browser" [(displayScreen, "BROWSER"),(projectionScreen, "PROJECTION")]
