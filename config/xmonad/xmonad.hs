@@ -275,7 +275,7 @@ myManageHook =
         , isDialog --> doFloat
         ]
 
-myLayouts = toggleLayouts (noBorders Full) (smartBorders (threeColumn ||| tall ||| multiColumn ||| mainGrid ||| magnifier mainGrid ))
+myLayouts = toggleLayouts (noBorders Full) (smartBorders (churchsetup ||| threeColumn ||| tall ||| multiColumn ||| mainGrid ||| magnifier mainGrid ))
   where
     magnifier = magnifiercz 1.4
 
@@ -292,6 +292,7 @@ myLayouts = toggleLayouts (noBorders Full) (smartBorders (threeColumn ||| tall |
     threeColumn = ThreeColMid 1 (3/100) (70/100)
 
     tall = (Tall 1 (10/100) (80/100))
+    churchSetup = ( (tall ****|* tall ) ****/* tall ) 
 
 myXmobarPP :: PP
 myXmobarPP =
