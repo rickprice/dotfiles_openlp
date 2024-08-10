@@ -276,7 +276,7 @@ myManageHook =
         , isDialog --> doFloat
         ]
 
-myLayouts = toggleLayouts (noBorders Full) (smartBorders (churchsetup ||| threeColumn ||| tall ||| multiColumn ||| mainGrid ||| magnifier mainGrid ))
+myLayouts = toggleLayouts (noBorders Full) (smartBorders (churchSetup ||| threeColumn ||| tall ||| multiColumn ||| mainGrid ||| magnifier mainGrid ))
   where
     magnifier = magnifiercz 1.4
 
