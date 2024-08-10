@@ -26,6 +26,7 @@ import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.UrgencyHook
 import XMonad.Layout.Magnifier
 import XMonad.Layout.MultiColumns
+import XMonad.Layout.LayoutCombinators hiding ( (|||) )
 
 -- import XMonad.Layout.Named
 -- import XMonad.Layout.NoBorders
