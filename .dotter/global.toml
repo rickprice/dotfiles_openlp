@@ -47,3 +47,7 @@
 "home/openlp-OSC-control/Pipfile" = { target = "~/OpenLPOSCControl/Pipfile", type = "template"}
 "home/openlp-OSC-control/Pipfile.lock" = { target = "~/OpenLPOSCControl/Pipfile.lock", type = "template"}
 "local/bin/openLPOSCControl.sh" = "~/.local/bin/openLPOSCControl"
+
+[AV.files]
+"local/bin/startupAV.sh" = "~/.local/bin/startupAV"
+"local/bin/stopAV.sh" = "~/.local/bin/stopAV":
