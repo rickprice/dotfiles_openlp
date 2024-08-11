@@ -50,4 +50,4 @@
 
 [AV.files]
 "local/bin/startupAV.sh" = "~/.local/bin/startupAV"
-"local/bin/stopAV.sh" = "~/.local/bin/stopAV":
+"local/bin/stopAV.sh" = "~/.local/bin/stopAV"
