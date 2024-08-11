@@ -79,6 +79,8 @@ myRDPClient = "remmina"
 myRunBackgrounds = "feh --no-fehbg --bg-max --random " ++ myBackgrounds
 myFixScreens = "autorandr --change"
 myArdour = "ardour8"
+myStartupAV = "~/.local/bin/startupAV"
+myStopAV = "~/.local/bin/stopAV"
 myOBS = "obs"
 myOpenLP = "openlp"
 myTouchOSC = "/opt/touchosc/TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc"
@@ -202,32 +204,14 @@ myStartupHook  hostname= do
     -- spawnOnce "qmidinet -n 6"
     spawn myFixScreens
 
-    if hostname == hostnameChurch
-        then
-            do
-                -- Setup Service
-                spawnOn "SERVICE" myOBS
-                liftIO (threadDelay 6000000)
-                spawnOn "SERVICE" myTouchOSC
-                spawnOn "SERVICE" myOpenLP
-                spawn myOpenLPOSCControl
+    -- Setup Service
+    spawnOn "SERVICE" myStartupAV
 
-                -- Setup files
-                spawnOn "FILES" myFileManager
+    -- Setup files
+    spawnOn "FILES" myFileManager
 
-                -- Setup Browser
-                spawnOn "BROWSER" myBrowser
-        else
-            do
-                -- Setup Service
-                spawnOn "SERVICE" myOpenLP
-
-                -- Setup files
-                spawnOn "FILES" myFileManager
-
-                -- Setup Browser
-                spawnOn "BROWSER" myBrowser
-
+    -- Setup Browser
+    -- spawnOn "BROWSER" myBrowser
 
 main :: IO ()
 main = do
