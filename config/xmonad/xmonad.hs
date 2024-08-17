@@ -277,7 +277,8 @@ myLayouts = toggleLayouts (noBorders Full) (smartBorders (churchSetup ||| threeC
     threeColumn = ThreeColMid 1 (3/100) (70/100)
 
     tall = (Tall 1 (10/100) (80/100))
-    churchSetup = ( (tall ****|* tall ) ****/* tall ) 
+    -- churchSetup = ( (tall ****|* tall ) ****/* tall ) 
+    churchSetup = ( (tall ***|* tall ) ****/* tall ) 
 
 myXmobarPP :: PP
 myXmobarPP =
