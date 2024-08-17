@@ -211,7 +211,7 @@ myStartupHook  hostname= do
     spawnOn "FILES" myFileManager
 
     -- Setup Browser
-    -- spawnOn "BROWSER" myBrowser
+    spawnOn "BROWSER" myBrowser
 
 main :: IO ()
 main = do
