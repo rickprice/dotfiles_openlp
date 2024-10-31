@@ -83,7 +83,7 @@ myStartupAV = "~/.local/bin/startupAV"
 myStopAV = "~/.local/bin/stopAV"
 myOBS = "obs"
 myOpenLP = "openlp"
-myTouchOSC = "/opt/touchosc/TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc"
+myTouchOSC = "/usr/bin/TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc"
 myOpenLPOSCControl = "openLPOSCControl"
 
 -- Define extra workspaces that I use all the time, by hostname
