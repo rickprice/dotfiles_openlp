@@ -45,6 +45,14 @@ packages:
 #
 # extra-deps: []
 
+extra-deps:
+  - X11-1.10.3@sha256:e0b9a48aab0a963a4b5015287fe3aaf93181697931770a2c8477befe88a9e775,3759
+  - X11-xft-0.3.4@sha256:e08bd69d24c40f1a33e6c87964f200656da77ad6a1fbdf6a4073dcb967e65599,1380
+  - data-default-class-0.2.0.0@sha256:788dc5c0be3981ca83ad11206e300a77ae8a1c8b9bc4f9630f563d37f540ccbd,728
+  - random-1.2.1.2@sha256:32397de181e20ccaacf806ec70de9308cf044f089a2be37c936f3f8967bde867,6460
+  - setlocale-1.0.0.10@sha256:0fced50725acab02be09853f97d9dcc4880e28d6d9d21b7eaabdc709911fe29a,869
+  - utf8-string-1.0.2@sha256:79416292186feeaf1f60e49ac5a1ffae9bf1b120e040a74bf0e81ca7f1d31d3f,1538
+
 # Override default flag values for local packages and extra-deps
 # flags: {}
 
