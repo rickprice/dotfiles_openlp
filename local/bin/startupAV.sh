@@ -6,7 +6,7 @@ set -e -o pipefail
 # export PIPENV_PIPFILE=~/OpenLPOSCControl/Pipfile
 # exec pipenv run openLPOSCControl
 
-/opt/touchosc/TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc &
+TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc &
 
 obs &
 
