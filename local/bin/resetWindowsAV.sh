@@ -21,7 +21,7 @@ if _isRunning obs; then
 else
     echo "Starting OBS"
     obs &
-    sleep 5
+    sleep 10
 fi
 
 if _isRunning openlp; then
@@ -29,7 +29,7 @@ if _isRunning openlp; then
 else
     echo "Starting OpenLP"
     openlp &
-    sleep 5
+    sleep 15
 fi
 
 
