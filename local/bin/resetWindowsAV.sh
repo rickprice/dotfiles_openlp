@@ -13,6 +13,7 @@ if _isRunning TouchOSC; then
 else
     echo "Starting TouchOSC"
     TouchOSC --general.ui.editor false ~/.config/TouchOSC/ChurchService.tosc &
+    sleep 5
 fi
 
 if _isRunning obs; then
@@ -20,6 +21,7 @@ if _isRunning obs; then
 else
     echo "Starting OBS"
     obs &
+    sleep 5
 fi
 
 if _isRunning openlp; then
@@ -27,6 +29,7 @@ if _isRunning openlp; then
 else
     echo "Starting OpenLP"
     openlp &
+    sleep 5
 fi
 
 
