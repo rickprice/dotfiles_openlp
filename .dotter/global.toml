@@ -43,11 +43,5 @@
 [TouchOSC.files]
 "config/TouchOSC/ChurchService.tosc" = { target = "~/.config/TouchOSC/ChurchService.tosc", type = "symbolic"}
 
-[openLPOSCControl.files]
-"usr/share/OpenLPOSCControl/Pipfile" = { target = "/usr/share/OpenLPOSCControl/Pipfile", type = "template", owner = "root"}
-"usr/share/OpenLPOSCControl/Pipfile.lock" = { target = "/usr/share/OpenLPOSCControl/Pipfile.lock", type = "template", owner = "root"}
-"local/bin/OpenLPOSCControl.sh" = { target = "/usr/local/bin/OpenLPOSCControl", type = "symbolic", owner = "root"}
-"etc/systemd/system/OpenLPOSCControl.service" = { target = "/etc/systemd/system/OpenLPOSCControl.service", type = "symbolic", owner = "root"}
-
 [AV.files]
 "local/bin/setupAV.sh" = { target = "/usr/local/bin/setupAV", type = "symbolic", owner = "root"}
