@@ -46,7 +46,7 @@
 [openLPOSCControl.files]
 "home/openlp-OSC-control/Pipfile" = { target = "~/OpenLPOSCControl/Pipfile", type = "template"}
 "home/openlp-OSC-control/Pipfile.lock" = { target = "~/OpenLPOSCControl/Pipfile.lock", type = "template"}
-"local/bin/OpenLPOSCControl.sh" = { target = "/usr/local/bin/openLPOSCControl", type = "symbolic", owner = "root"}
+"local/bin/OpenLPOSCControl.sh" = { target = "/usr/local/bin/OpenLPOSCControl", type = "symbolic", owner = "root"}
 "etc/systemd/system/OpenLPOSCControl.service" = { target = "/etc/systemd/system/OpenLPOSCControl.service", type = "symbolic", owner = "root"}
 
 [AV.files]
